@@ -25,8 +25,9 @@ public class Lambda_1 {
 				System.out.println(i);
 			}
 		};
-		
 		fi.method();
-
+		
+		
+		
 	}
 }

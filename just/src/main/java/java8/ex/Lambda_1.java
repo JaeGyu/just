@@ -19,6 +19,14 @@ public class Lambda_1 {
 
 		fi = () -> System.out.println("method call3");
 		fi.method();
+		
+		fi = () -> {
+			for(int i=0;i<10;i++){
+				System.out.println(i);
+			}
+		};
+		
+		fi.method();
 
 	}
 }

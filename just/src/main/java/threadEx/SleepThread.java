@@ -14,11 +14,6 @@ public class SleepThread extends Thread {
 				System.out.println("현재 이 스레드가 인터럽트에 걸렸습니다.");
 				System.out.println(this.getState());
 			}
-			try {
-				this.wait();
-			} catch (InterruptedException e) {
-				System.out.println("스레드를 wait시킵니다.  " + this.getState());
-			}
 		}
 	}
 

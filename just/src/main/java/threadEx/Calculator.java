@@ -16,5 +16,6 @@ public class Calculator {
 			e.printStackTrace();
 		}
 		System.out.println(Thread.currentThread().getName() + ":" + this.memory);
+	    System.out.println("현재 돌아가는 쓰레드는 ::  "+Thread.currentThread().getState());
 	}
 }

@@ -11,5 +11,6 @@ public class User1 extends Thread {
 	@Override
 	public void run() {
 		calculator.setMemory(100);
+		System.out.println("쓰레드 내부의 run메서드 :: "+this.getState());
 	}
 }

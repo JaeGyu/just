@@ -15,6 +15,7 @@ public class SleepThreadExample {
 		th.interrupt();
 		try {
 			Thread.sleep(5000);
+			System.out.println(th.getState());
 			System.out.println("5초 후 wait상태의 스레드를 깨웁니다.");
 		} catch (InterruptedException e) {
 			e.printStackTrace();

@@ -11,13 +11,14 @@ import java.util.Arrays;
 import org.junit.Test;
 
 public class TestOutputStream {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		OutputStream out = null;
 		try {
 			out = new FileOutputStream("aaa.txt");
 			String str = "이 문자열을 파일에 기록하고 싶습니다.";
 			byte[] arr = str.getBytes();
 			out.write(arr);
+			Thread.sleep(300000);
 		} catch (FileNotFoundException e) {
 			System.out.println("저장할 파일을 찾지 못 했습니다.");
 		} catch (IOException e) {

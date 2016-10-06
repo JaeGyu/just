@@ -11,6 +11,8 @@ public class TestInputStream {
 		try {
 			in = new FileInputStream("/Users/jaegyuhan/dev/javaEx/zzz/aaa.txt");
 			while (true) {
+				
+				//read()는 1byte를 읽어 드린다.
 				int data = in.read();
 				System.out.println(data);
 				if (data == -1) {

@@ -15,6 +15,9 @@ public class TestOutputStream {
 		OutputStream out = null;
 		try {
 			out = new FileOutputStream("aaa.txt");
+			String str = "이 문자열을 파일에 기록하고 싶습니다.";
+			byte[] arr = str.getBytes();
+			out.write(arr);
 		} catch (FileNotFoundException e) {
 			System.out.println("저장할 파일을 찾지 못 했습니다.");
 		} catch (IOException e) {
@@ -33,10 +36,18 @@ public class TestOutputStream {
 	@Test
 	public void testGetByte() throws Exception {
 		/*
-		 * 한글을 3byte로 처리 하고 있다. 
-		 * */
+		 * 한글을 3byte로 처리 하고 있다.
+		 */
 		String str = "한글";
 		byte[] arr = str.getBytes();
 		System.out.println(Arrays.toString(arr));
+	}
+
+	@Test
+	public void testGetByteForChar() throws Exception {
+		char chr = "한".charAt(0);
+		System.out.println(chr);
+		Character ch = chr;
+		System.out.println(ch.BYTES);
 	}
 }

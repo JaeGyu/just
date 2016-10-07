@@ -14,6 +14,16 @@ public class FileCopy2 {
 		try {
 			in = new FileInputStream("/Users/jaegyuhan/dev/javaEx/zzz/bbb.txt");
 			out = new FileOutputStream("ccc.txt");
+			byte[] arr = new byte[5];
+
+			while (true) {
+				int count = in.read(arr);
+				if (count == -1) {
+					break;
+				}
+
+				out.write(arr);
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();

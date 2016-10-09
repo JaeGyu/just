@@ -1,0 +1,856 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>선경도서관</title>
+<meta name="title" content="선경도서관"/>
+<meta name="author" content="선경도서관"/>
+<meta name="keywords" content="선경도서관, 수원시, 도서관사업소"/>
+
+<link rel="stylesheet" type="text/css" href="/ssc/main_all.css" />
+
+<script type="text/javascript" src="/P_js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/P_js/jquery.bxslider.js"></script>	
+<link rel="stylesheet" type="text/css" href="/ssc/jquery.bxslider.css" />
+
+
+<script type="text/javascript" src="/P_js/js.js"></script>
+
+
+<script type="text/javascript">
+
+function middle_search() {
+	if (document.seek.a_q.value=="도서검색명" || document.seek.a_q.value=="") {
+		alert("검색어를 입력해주세요.");
+		document.seek.a_q.value=''; 
+		document.seek.a_q.focus();
+		return false;
+	} else {
+		document.seek.action='/A-LibM/search1.asp';
+		document.seek.target='_self';
+		return true;
+	}
+}
+</script>
+
+
+
+
+</head>
+
+
+<body>
+<div id="container">
+ <script type="text/javascript" src="/P_js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="/P_js/gnb.js"></script>
+
+<!--skipnavigation Start-->
+<dl id="skipnavigation">
+  <dt><strong class="skip">바로가기 메뉴</strong></dt>
+  <dd><a href="#body_contents" class="skip_navi">본문 바로가기</a></dd>
+</dl>
+<noscript>*  본 브라우저는 스크립트를 지원하지 않습니다. 홈페이지가 정상적으로 보이지 않을때는 최신 브라우저를 설치하여 사용하시길 권장합니다.</noscript>
+<!--//#skipnavigation End-->  
+
+
+	<div id="header"> 
+		<div class="headerDiv">
+   			<!--글로벌Start-->
+			  <div class="global">
+			  <h2 class="skip">글로벌메뉴</h2>
+				   <a href="/index.asp">홈</a>
+				              
+				   <a href="/member/member_login.gpin.asp">로그인</a>
+				   <a href="http://sk.suwonlib.go.kr/newmember/join.asp?lib_code=sunkyung" onclick="window.open(this.href, 'join', 'width=760,height=700,status=no,scrollbars=yes'); return false;" title="새창열림" target="_blank">회원가입</a>
+				   			
+				   <a href="/html/08_sitemap/sitemap.asp">사이트맵</a>
+				   <a class="global_last" href="http://www.suwonlib.go.kr/" target="_blank" title="새창열림"><span>인트로바로가기</span></a>
+			  </div>
+			  <!--글로벌End -->
+				</div> 
+			</div>
+
+
+			<div id="gnbDiv">
+				<div class="gnbDiv" style="height:92px"> <!--//활성화시 350px/ 비활성화시 92px-->	
+					<div class="gnbWrap">
+						<h1><a href="/"><img src="/images/sunkyung/gmi/cni/logo.gif" alt="sunkyung" /></a></h1>
+						<div class="gnb">
+							<ul>
+							
+								<li class="one"> 
+									<a class="oneDep disB" href="/html/01_guide/guide01.asp">이용안내</a>
+									<div class="guideBg">
+										<p class="tit">이용안내</p>
+										<p class="txt">도서관 이용안내에 대한 정보를 제공합니다.</p>
+										<p class="img"><img src="/images/gmi/cni/lnb_01.jpg" alt=""/></p>
+									</div>
+									<p class="twoDep">										
+										<a class="disB off" href="/html/01_guide/guide01.asp">이용 및 회원안내</a>
+										<a class="disB off" href="/html/01_guide/guide02.asp">열람실이용</a>
+										<a class="disB off" href="/html/01_guide/guide03.asp">대출회원가입</a>
+										<a class="disB off" href="/html/01_guide/guide06.asp">FAQ</a>
+										<a class="disB off" href="/html/01_guide/guide07.asp">모바일 앱 이용안내</a>
+									</p>
+								</li>
+							
+								<li class="two">
+									<a class="oneDep disB" href="/html/02_search/?a_v=f">자료찾기</a>
+									<div class="guideBg">
+										<p class="tit">자료찾기</p>
+										<p class="txt">도서관 자료를 찾으실 수 있습니다.</p>
+										<p class="img"><img src="/images/gmi/cni/lnb_02.jpg" alt=""/></p>
+									</div>
+									<p class="twoDep">										
+										<a class="disB off" href="/html/02_search/?a_v=f">도서관 자료찾기</a>
+										<a class="disB off" href="/html/02_search/search02.asp">추천도서</a>
+										<a class="disB off" href="/html/02_search/new.asp">신간안내</a>
+										<a class="disB off" href="/html/02_search/best.asp">베스트대출</a>
+										<a class="disB off" href="/html/02_search/search05.asp">특화자료(수원학)</a>							
+									</p>
+								</li>
+							
+								<li class="three"> 
+									<a class="oneDep disB" href="/html/03_culture/culture01.asp">문화행사</a>
+									<div class="guideBg">
+										<p class="tit">문화행사</p>
+										<p class="txt">문화행사와 관련된 정보를 제공합니다.</p>
+										<p class="img"><img src="/images/gmi/cni/lnb_03.jpg" alt=""/></p>
+									</div>
+									<p class="twoDep">										
+										<a class="disB off le-15" href="/html/03_culture/culture01.asp">독서문화프로그램 안내</a>
+										<a class="disB off" href="/html/03_culture/culture03.asp">동아리커뮤니티</a>							
+									</p>
+								</li>
+							
+								<li class="four">
+									<a  class="oneDep disB" href="/html/04_board/board01.asp">참여마당</a>
+									<div class="guideBg">
+										<p class="tit">참여마당</p>
+										<p class="txt">다양한 프로그램에 참여하실 수 있습니다.</p>
+										<p class="img"><img src="/images/gmi/cni/lnb_04.jpg" alt=""/></p>
+									</div>
+									<p class="twoDep">										
+										<a class="disB off" href="/html/04_board/board01.asp">도서관에 물어보세요</a>
+										<a class="disB off" href="/html/04_board/board02.asp">칭찬합니다</a>
+										<a class="disB off" href="/html/04_board/board03.asp">온라인신청</a>
+										<a class="disB off" href="/html/04_board/board04_05.asp">도서관서비스</a>		
+										<a class="disB off" href="/html/04_board/board06.asp">자유게시판</a>								
+									</p>
+								</li>
+							
+								<li class="five"> 
+									<a href="/html/05_news/news01.asp" class="oneDep disB">도서관소식</a>
+									<div class="guideBg">
+										<p class="tit">도서관소식</p>
+										<p class="txt">도서관에 대한 소식을 전해 드립니다.</p>
+										<p class="img"><img src="/images/gmi/cni/lnb_05.jpg" alt=""/></p>
+									</div>
+									<p class="twoDep">										
+										<a class="disB off" href="/html/05_news/news01.asp">공지사항</a>
+										<a class="disB off" href="/html/05_news/news02.asp">도서관갤러리</a>		
+										<a class="disB off" href="/html/05_news/news03.asp">공개자료실</a>							
+									</p>
+								</li>
+							
+								<li class="six"> 
+									<a class="oneDep disB" href="/html/06_info/info01.asp">도서관소개</a>
+									<div class="guideBg">
+										<p class="tit">도서관소개</p>
+										<p class="txt">도서관에 대하여 소개합니다.</p>
+										<p class="img"><img src="/images/gmi/cni/lnb_06.jpg" alt=""/></p>
+									</div>
+									<p class="twoDep">										
+										<a class="disB off" href="/html/06_info/info01.asp">연혁</a>
+										<a class="disB off" href="/html/06_info/info07.asp">행정서비스헌장</a>
+										<a class="disB off" href="/html/06_info/info02.asp">조직도</a>
+										<a class="disB off" href="/html/06_info/info03.asp">현황안내</a>
+										<a class="disB off" href="/html/06_info/info06.asp">상징물</a>
+										<a class="disB off" href="/html/06_info/info05.asp">오시는길</a>						
+									</p>
+								</li>
+							
+							</ul>
+						</div>
+					</div>
+					<div class="twoDbg" style="display:"></div> <!--//gnb활성화시내려옴 -->
+				</div><!--//gnbDiv-->
+			</div>
+
+  
+ 
+
+ 
+
+ <div id="body_outer">
+ <!--//body_contents Start-->
+
+
+		 <div id="body_contents"> 
+		 
+				 
+				   <!--//main_top Start-->
+				 <div id="main_top">  
+						<div class="visual_txt"><img src="/images/sunkyung/gmi/niam/slogan.png" alt="지식의 샘 선경도서관" /></div>
+
+						<div class="hue_btn"><a href="http://www.suwonlib.go.kr/small_lib/guide04.asp" onclick="window.open(this.href, 'webzine', 'width=880, height=680,scrollbars=yes'); return false" title="새창열림" target="_blank"><img src="/images/gmi/niam/all_hue_btn.png" alt="전체도서관 휴관일안내 바로가기" /></a></div>
+						 <script type="text/javascript">
+$(document).ready(function(){
+  $('.slider4').bxSlider({
+    slideWidth: 134,
+    minSlides: 2,
+    maxSlides: 3,
+    moveSlides: 1,
+    slideMargin: 63,
+	pager:false
+  });
+});
+</script>
+
+
+<div class="slide_box">
+	<div class="slider4">
+
+
+			<div class="slide"><a href="/html/02_search/search02.asp?process_type=view&amp;b_idx=-3130"><img src="/board_img/suwon_file/recommend/2016090623813.jpg" alt="역사문화학" /></a></div>
+
+			<div class="slide"><a href="/html/02_search/search02.asp?process_type=view&amp;b_idx=-3129"><img src="/board_img/suwon_file/recommend/2016090623101.jpg" alt="나를 움직인 이 한 장면" /></a></div>
+
+			<div class="slide"><a href="/html/02_search/search02.asp?process_type=view&amp;b_idx=-3128"><img src="/board_img/suwon_file/recommend/2016090621922.jpg" alt="춘희는 아기란다" /></a></div>
+
+			<div class="slide"><a href="/html/02_search/search02.asp?process_type=view&amp;b_idx=-3127"><img src="/board_img/suwon_file/recommend/2016090621557.jpg" alt="조광조 평전" /></a></div>
+
+			<div class="slide"><a href="/html/02_search/search02.asp?process_type=view&amp;b_idx=-3126"><img src="/board_img/suwon_file/recommend/2016090621233.jpg" alt="사마천과 사기에 대한 모든 것" /></a></div>
+
+			<div class="slide"><a href="/html/02_search/search02.asp?process_type=view&amp;b_idx=-3125"><img src="/board_img/suwon_file/recommend/20160906114916.jpg" alt="우리네 옛 살림집 김광언" /></a></div>
+
+			<div class="slide"><a href="/html/02_search/search02.asp?process_type=view&amp;b_idx=-3124"><img src="/board_img/suwon_file/recommend/20160906114613.jpg" alt="선생님은 싫어하고 나는 좋아하는 것" /></a></div>
+
+			<div class="slide"><a href="/html/02_search/search02.asp?process_type=view&amp;b_idx=-3123"><img src="/board_img/suwon_file/recommend/20160906114159.jpg" alt="빌린 책을 돌려주러 갑니다" /></a></div>
+
+			<div class="slide"><a href="/html/02_search/search02.asp?process_type=view&amp;b_idx=-3122"><img src="/board_img/suwon_file/recommend/20160906113748.jpg" alt="청소기에 갇힌 파리 한 마리" /></a></div>
+
+	</div>
+</div>
+
+ 
+						
+				 </div>
+				 <!--//main_top End-->		  
+		  
+		  
+				
+				 <!-- 휴관일 안내 -->
+								
+	
+				
+				<div id="cal_outer_main">
+
+									<div class="calendar_top"> 
+										<h2>휴관일 안내</h2>
+										   
+											<div class="calendardate">
+												<a class="btn_pre" href="/?date2=10"><img src="/images/gmi/niam/cal_left.gif" alt="이전달" /></a>
+												16년 11월
+												<a class="btn_next" href="/?date2=12"><img src="/images/gmi/niam/cal_right.gif" alt="다음달" /></a> 
+											</div>
+											<img class="hue" src="/images/gmi/niam/cal_s_txt.gif" alt="휴관일" />
+									</div>
+
+
+									<div class="cal_2m">
+										<table class="cal_table_m">
+											<caption>휴관일 달력</caption>
+											<thead>
+												<tr>
+													<th scope="col" class="sun">일</th>
+													<th scope="col">월</th>
+													<th scope="col">화</th>
+													<th scope="col">수</th>
+													<th scope="col">목</th>
+													<th scope="col">금</th>
+													<th scope="col" class="sat">토</th>
+												</tr>
+											</thead>
+											<tbody>
+											
+												<tr>
+											
+													<td></td>
+											
+													<td></td>
+											
+													<td>1</td>
+											
+													<td>2</td>
+											
+													<td>3</td>
+											
+													<td>4</td>
+											
+													<td class="sat">5</td>
+											
+													</tr>
+													<tr>
+											
+													<td class="sun">6</td>
+											
+													<td>7</td>
+											
+													<td>8</td>
+											
+													<td>9</td>
+											
+													<td>10</td>
+											
+													<td>11</td>
+											
+													<td class="sat">12</td>
+											
+													</tr>
+													<tr>
+											
+													<td class="sun">13</td>
+											
+													<td class="hue_t">14</td>
+											
+													<td>15</td>
+											
+													<td>16</td>
+											
+													<td>17</td>
+											
+													<td>18</td>
+											
+													<td class="sat">19</td>
+											
+													</tr>
+													<tr>
+											
+													<td class="sun">20</td>
+											
+													<td>21</td>
+											
+													<td>22</td>
+											
+													<td>23</td>
+											
+													<td>24</td>
+											
+													<td>25</td>
+											
+													<td class="sat">26</td>
+											
+													</tr>
+													<tr>
+											
+													<td class="sun">27</td>
+											
+													<td class="hue_t">28</td>
+											
+													<td>29</td>
+											
+													<td>30</td>
+											
+												<td></td>
+											
+												<td></td>
+											
+												<td></td>
+											
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- cal_2m -->
+									
+
+									
+								</div>
+								<!-- //달력 -->  
+				 <!-- // 휴관일 안내 -->
+
+
+
+				 <!-- 공지사항 -->
+						  <div id="tab1" class="list">
+						  <h2>공지사항</h2>
+						   <div class="tabmenu">
+							<ul>
+						 							
+							<li><a href="#tab1" onclick="tabOn(1,1); return false;"></a>
+	<div id="tab1c1" class="tabcontent">
+	<ul>
+
+		<li><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-11468">경기도민과 함께하는 수원 화성 걷기대회</a><span>2016-11-15</span></li>
+
+		<li><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-11456">SKT 휴대폰 본인확인서비스 일시 중단 안내</a><span>2016-11-09</span></li>
+
+		<li><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-11437">수원시도서관 자료실 개실시간 조정 안내</a><span>2016-11-08</span></li>
+
+		<li><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-11432">책나루서비스 운영 개선안내</a><span>2016-11-08</span></li>
+
+	</ul>
+	<div class="tabmore"><a href="/html/05_news/news01.asp" title="공지사항 목록 페이지로 이동">더보기</a></div>       
+	</div>
+</li>
+
+   
+							</ul>
+						   </div>
+						  <script type="text/javascript">tabOn(1,1);</script>
+
+						  <h2><a href="/html/05_news/news01_02.asp" target="_self">타도서관 소식</a></h2>
+					</div>
+				 <!-- //공지사항 -->
+
+
+
+				<!-- 도서검색 -->
+						<form name="seek"  method="get" action="/A-LibM/search1.asp" target="_self" onsubmit="return middle_search();">
+						<div id="top_search">
+						 <fieldset>
+						 <h2>도서검색</h2> 
+						 <legend>도서검색</legend>
+						 <label for="search_word" class="skip">검색어입력</label>
+						 <input type="text" class="inputText" name="a_q" id="search_word" title="검색어를 입력하세요."  />
+						 <input type="image"  class="search_btn" src="/images/gmi/niam/btn_search.gif" alt="검색" />
+						 </fieldset>
+						</div>
+						</form>				
+				<!-- //도서검색 -->
+
+
+				<!-- 팝업존 -->						
+						  
+
+<!--팝업존 시작-->
+<div id="popupZone">
+
+	<div id="przone">
+	<h2>팝업존</h2>
+
+	  <!-- 팝업이미지-->
+	  <div id="prcon">
+	   <ul>
+	   <li id="popupzoneImage1" style="display:block;"><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-11468"  ><img src="/board_img/popupzone/20161115_popup00.jpg" alt="경기도민과 함께하는 수원 화성 걷기대회"  width="248" height="153"/></a></li><li id="popupzoneImage2" style="display:none;"><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-11432"  ><img src="/board_img/popupzone/20161108_popup.jpg" alt="책나루서비스 운영 개선안내"  width="248" height="153"/></a></li><li id="popupzoneImage3" style="display:none;"><a href="http://www.suwon.go.kr/web/board/BD_board.view.do?bbsCd=1042&amp;seq=20160412151136042" target="_blank" title="새창열림" ><img src="/board_img/popupzone/popup20160420.jpg" alt="&#53965;큰무료입장"  width="248" height="153"/></a></li><li id="popupzoneImage4" style="display:none;"><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-10227&amp;BBS_id=notice&amp;page=1"  ><img src="/board_img/popupzone/popup20160317.jpg" alt="선경도서관 VOD 서비스 운영 안내"  width="248" height="153"/></a></li>
+	   </ul>			
+	  </div>
+	  
+	  
+	  
+	  <!--팝업제목-->
+	  <div id="prtit">
+		<ul>	
+	   <li id="popupzoneNumber1" style="display:block;"><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-11468"  >경기도민과 함께하는 수원 화성 걷기대회</a></li><li id="popupzoneNumber2" style="display:none;"><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-11432"  >책나루서비스 운영 개선안내</a></li><li id="popupzoneNumber3" style="display:none;"><a href="http://www.suwon.go.kr/web/board/BD_board.view.do?bbsCd=1042&amp;seq=20160412151136042" target="_blank" title="새창열림" >&#53965;큰무료입장</a></li><li id="popupzoneNumber4" style="display:none;"><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-10227&amp;BBS_id=notice&amp;page=1"  >선경도서관 VOD 서비스 운영 안내</a></li>
+		</ul>
+	  </div>
+	  
+	 
+	  <!--제어버튼-->
+	  <div id="control">
+	   <ul>
+	   <li><a href="#pbtn" onclick="popup_display('', 'prev');" ><img src="/images/gmi/niam/b_pre.png"  alt="이전" /></a></li>
+	   <li class="bt2"><a href="#pbtn" onclick="popup_display('', 'pause');" ><img id="popup_pause_img02" src="/images/gmi/niam/b_stop.png" alt="정지" /></a></li>
+	   <li class="bt3"><a href="#pbtn" onclick="popup_display('', 'next');" ><img src="/images/gmi/niam/b_next.png" alt="다음" /></a></li>   
+	   <li><a href="#PZPlusRe" onclick="displayOn('PZPlusRe');return false;"><img src="/images/gmi/niam/popup_list.png" alt="전체목록" /></a></li>  
+	   </ul>
+	  </div>
+	  
+	  
+	 
+	 
+	  <!--팝업목록-->   
+	  <div class="PZPlusRe" id="PZPlusRe">  
+		  <div class="PZList_frm scroll">
+		  <h2 class="skip">팝업존 전체목록</h2>
+		   <ul>
+			   <li><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-11468"  >경기도민과 함께하는 수원 화성 걷기대회</a></li><li><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-11432"  >책나루서비스 운영 개선안내</a></li><li><a href="http://www.suwon.go.kr/web/board/BD_board.view.do?bbsCd=1042&amp;seq=20160412151136042" target="_blank" title="새창열림" >&#53965;큰무료입장</a></li><li><a href="/html/05_news/news01.asp?process_type=view&amp;b_idx=-10227&amp;BBS_id=notice&amp;page=1"  >선경도서관 VOD 서비스 운영 안내</a></li>
+		   </ul>
+		  </div>
+		
+		<div class="btn"><a href="#PZPlusRe" onclick="displayOff('PZPlusRe');return false;"  onfocus=""><img src="/images/gmi/niam/popup_close.gif" alt="닫기" /></a></div>   
+	 </div>
+		
+<script type="text/javascript">
+ popup_scroll(4);
+</script>
+
+	 </div>
+
+ </div>
+<!--팝업존 끝-->  
+				<!-- //팝업존-->
+<!-- 열람실 좌석조회 서수원, 북수원, 영통, 태장마루 <div class="link_btn"> -->			
+
+				<!-- 자주찾는 서비스 -->						
+						<div class="link_btn02">
+							<h2 class="skip">자주찾는<br />서비스</h2>
+							<ul>
+								 <li><a href="/html/04_board/board04_05.asp"><img src="/images/gmi/niam/icon_btn01.png" alt="책나루(무인)도서관" /><span>책나루(무인)<br />도서관</span></a></li>
+								 <li><a href="/html/04_board/board04_09.asp"><img src="/images/gmi/niam/icon_btn08.png" alt="메트로땅콩도서관
+" /><span>메트로땅콩<br />도서관</span></a></li>
+								 <li><a href="/html/04_board/board04.asp"><img src="/images/gmi/niam/icon_btn02.png" alt="전자도서관" /><span>전자도서관</span></a></li>
+								 <li><a href="/html/04_board/board03_04.asp"><img src="/images/gmi/niam/icon_btn03.png" alt="북스타트" /><span>북스타트</span></a></li>
+								 <li><a href="/html/04_board/board03.asp"><img src="/images/gmi/niam/icon_btn04.png" alt="청소년자원봉사" /><span>청소년<br />자원봉사</span></a></li>
+								 <li><a href="/html/04_board/board03_01.asp"><img src="/images/gmi/niam/icon_btn05.png" alt="디지털자료실예약" /><span>디지털<br />자료실예약</span></a></li>
+								 
+								<li><a href="/member/member_login.gpin.asp" onclick="alert('로그인 하세요');"><img src="/images/gmi/niam/icon_btn07.png" alt="미디어북" /><span>미디어북</span></a></li>
+								
+							</ul>
+						</div>
+				<!-- //자주찾는 서비스 -->
+
+
+				<!-- 도서관 문화행사 -->						
+						<div class="lib_culture">
+							<h2>도서관 문화행사</h2>
+							
+<!--//도서관문화행사 Start-->
+<div id="selectbox02">
+
+									   <div id="select_town">
+									   <h3><a href="#selectbox_town" onclick="displayOn('selectbox_town'); return false;"><img src="/images/gmi/niam/culture_select.gif" alt="도서관선택" /></a></h3>
+									   
+									   <div id="selectbox_town" class="sbx02" style="display:none;">
+									   <h4><img src="/images/gmi/niam/culture_select_h3.gif" alt="도서관 선택" /></h4>
+									   
+									   
+									   <div class="wrap">
+										<ul>   
+											<li><a href="http://sk.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">선경도서관</a></li>
+											<li><a href="http://ct.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">중앙도서관</a></li>
+											<li><a href="http://cy.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">창룡도서관</a></li>
+											<li><a href="http://bdn.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">버드내도서관</a></li>
+											<li><a href="http://seo.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">서수원도서관</a></li>
+											<li><a href="http://hms.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">호매실도서관</a></li>
+											<li><a href="http://hl.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">한림도서관</a></li>
+											<li><a href="http://buk.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">북수원도서관</a></li>
+											<li><a href="http://dcg.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">대추골도서관</a></li>
+											<li><a href="http://iw.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">일월도서관</a></li>
+											<li><a href="http://gh.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">광교홍재도서관</a></li>
+											<li><a href="http://yt.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">영통도서관</a></li>		
+											<li><a href="http://tm.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">태장마루도서관</a></li>
+											<li><a href="http://hd.suwonlib.go.kr/html/03_culture/culture01.asp" target="_blank" title="새창열림">화서다산도서관</a></li>
+										</ul>   
+									   
+									   </div>
+									 
+									   <a href="#con_right" onclick="displayOff('selectbox_town'); obj=document.getElementById('select_town').getElementsByTagName('a')[0];obj.focus(); return false;" class="close"><img src="/images/gmi/niam/select_close.gif" width="26" height="28" alt="목록 닫기" /></a>   
+									   </div>
+									   
+									   </div>
+
+
+   <ul>
+
+   <li>
+
+	<img src="/images/gmi/niam/btn_end.png" alt="마감" /><a href="/online_app/culture_view.asp?bd_seqn5=6818">논어에서 배우는 삶의 철학</a></li>
+
+   <li>
+
+	<img src="/images/gmi/niam/btn_end.png" alt="마감" /><a href="/online_app/culture_view.asp?bd_seqn5=6731">한국근현대사 인물열전</a></li>
+
+   <li>
+
+	<img src="/images/gmi/niam/btn_ing.png" alt="접수중" />
+
+<a href="/online_app/culture_view.asp?bd_seqn5=6581">감동과 울림의 명작읽기.2</a></li>
+
+   <li>
+
+	<img src="/images/gmi/niam/btn_end.png" alt="마감" /><a href="/online_app/culture_view.asp?bd_seqn5=6735">[탐방]길위의 인문학</a></li>
+
+   <li>
+
+	<img src="/images/gmi/niam/btn_end.png" alt="마감" /><a href="/online_app/culture_view.asp?bd_seqn5=6734">[강연]길위의 인문학</a></li>
+
+   </ul>
+
+
+	<div class="tabmore"><a href="/html/03_culture/culture01.asp" title="도서관 문화행사 목록 페이지로 이동">더보기</a></div>
+</div>
+
+   
+ 
+						</div>
+				<!-- //도서관 문화행사 -->
+
+
+				<!-- 모바일 앱 이용안내 정보그루터기 -->
+
+					<ul class="m_bnr">
+						<li class="btn01"><a href="/html/01_guide/guide07.asp">모바일 앱 이용안내</a></li>
+						<li class="btn02"><a href="http://sk.suwonlib.go.kr/webzine/index.htm" onclick="window.open(this.href, 'webzine', 'width=780, height=650'); return false" title="새창열림" target="_blank">정보그루터기</a></li>
+					</ul>
+
+				<!--//모바일 앱 이용안내 정보그루터기 -->
+
+
+				<!-- 도서관소통공간 -->
+
+					 				<!-- 도서관소통공간 -->
+					<div class="lib_sns">
+						<h2>도서관<br /><span>SNS</span></h2>
+						   <ul>
+							   <li class="facebook"><a href="https://www.facebook.com/suwonlib" target="_blank" title="새창"><img src="/images/gmi/niam/fb_icon.png" alt="페이스북 바로가기" /><span>Facebook</span></a></li>
+							   <li class="tw"><a href="#twPlusRe" onclick="displayOn('twPlusRe');return false;"><img src="/images/gmi/niam/tw_icon.png" alt="과별 트위터 바로가기" /><span>Twitter</span></a>
+								<ul class="panel" style="display: none;">
+								   <li><a href="https://twitter.com/suwonlibrary" target="_blank" title="새창열림">도서관정책과/화서다산</a></li>
+								   <li><a href="https://twitter.com/sklib2015" target="_blank" title="새창열림">선경/중앙/창룡/버드내</a></li>
+								   <li><a href="https://twitter.com/seosuwonlib" target="_blank" title="새창열림">호매실/서수원/한림</a></li>
+								   <li><a href="https://twitter.com/buk_lib" target="_blank" title="새창열림">북수원/대추골/일월</a></li>
+								   <li><a href="https://twitter.com/suwonytlib" target="_blank" title="새창열림">광교홍재/영통/태장마루</a></li>
+							   </ul>
+							   </li>
+						   </ul>
+
+						  <!--트위터 목록-->   
+						  <div class="twPlusRe" id="twPlusRe">  
+						  <h2 class="skip">과별 트위터 목록</h2>
+							  <div class="twList_frm">
+									<ul>
+									   <li><a href="https://twitter.com/suwonlibrary" target="_blank" title="새창열림">도서관정책과/화서다산</a></li>
+									   <li><a href="https://twitter.com/sklib2015">선경/중앙/창룡/버드내</a></li>
+									   <li><a href="https://twitter.com/seosuwonlib" target="_blank" title="새창열림">호매실/서수원/한림</a></li>
+									   <li><a href="https://twitter.com/buk_lib" target="_blank" title="새창열림">북수원/대추골/일월</a></li>
+									   <li><a href="https://twitter.com/suwonytlib" target="_blank" title="새창열림">광교홍재/영통/태장마루</a></li>
+								   </ul>
+							  </div>
+							
+							<div class="btn"><a href="#twPlusRe" onclick="displayOff('twPlusRe');return false;"  onfocus=""><img src="/images/gmi/niam/twList_frm_close.png" alt="닫기" /></a></div>   
+						 </div>
+
+
+					</div>
+				<!--// 도서관소통공간 -->
+
+				
+				<!-- 도서관소통공간
+					<div class="sns">
+						<h2>도서관<br />소통공간</h2>
+						   <ul>
+							   <li><a href="https://twitter.com/suwonlibrary" target="_blank" title="새창열림">도서관정책과/화서다산</a></li>
+							   <li><a href="https://twitter.com/sklib2015">선경/중앙/창룡/버드내</a></li>
+							   <li><a href="https://twitter.com/seosuwonlib" target="_blank" title="새창열림">호매실/서수원/한림</a></li>
+							   <li><a href="https://twitter.com/buk_lib" target="_blank" title="새창열림">북수원/대추골/일월</a></li>
+							   <li><a href="https://twitter.com/suwonytlib" target="_blank" title="새창열림">광교홍재/영통/태장마루</a></li>
+						   </ul>
+					</div>
+				// 도서관소통공간 -->
+
+ 
+
+				<!--//도서관소통공간 -->
+
+
+				<!-- 비치희망도서신청 상호대차 -->
+						   <ul class="m_btn">
+							   <li class="btn01"><a href="/html/04_board/board03_02.asp">비치희망도서<br />신청</a></li>
+							   <li class="btn02"><a href="/html/04_board/board04_02.asp">상호대차</a></li>
+						   </ul>
+				<!--// 비치희망도서신청 상호대차 -->
+
+
+
+
+
+		 </div>
+
+
+<!--//body_contents End-->
+ </div>
+ 
+
+ <div id="footer_outer">
+
+	 <div class="footer"> 
+
+ <script type="text/javascript" src="/P_js/scroll.js"></script>
+
+		 <!-- 배너 -->
+		<div class="banner">
+		  <h2>배너모음</h2>		
+		 
+			  <ul class="banner_control">
+				 <li class="prev_banner"><a href="#n"><img src="/images/gmi/cni/banner_btn_up.gif" alt="이전배너보기"  /></a></li>
+				 <li class="pause_banner"><a href="#n"><img src="/images/gmi/cni/banner_btn_stop.gif" alt="배너정지" /></a></li>
+				 <li class="next_banner"><a href="#n"><img src="/images/gmi/cni/banner_btn_down.gif" alt="다음배너보기" /></a></li>     
+			  </ul>			  
+
+			 <ul class="banner_img clearfix">	 
+
+			   
+			   <li><a href="javascript:link_ni();"><img src="/images/gmi/main/banner16.gif" alt="사서에게 물어보세요" width="120" height="33" /></a></li> 
+			   
+			   <!-- sunkyung -->
+			   <li><a href="http://www.suwon.go.kr/" title="새창열림" target="_blank"><img src="/images/gmi/main/banner01.gif" alt="수원시청" width="120" height="33" /></a></li> 
+			   <li><a href="http://news.suwon.go.kr/main/" title="새창열림" target="_blank"><img src="/images/gmi/main/banner02.gif" alt="e수원뉴스" width="120" height="33" /></a></li> 
+			   <li><a href="http://tv.suwon.go.kr/" title="새창열림" target="_blank" class="last"><img src="/images/gmi/main/banner03.gif" alt="수원iTV" width="120" height="33" /></a></li> 
+			   <li><a href="http://tour.suwon.go.kr/web/tour/index.do" title="새창열림" target="_blank"><img src="/images/gmi/main/banner04.gif" alt="수원시문화관광" width="120" height="33" /></a></li> 
+			   <li><a href="http://www.nl.go.kr/nl/index.jsp" title="새창열림" target="_blank"><img src="/images/gmi/main/banner05.gif" alt="국립중앙도서관" width="120" height="33" /></a></li> 
+			   <li><a href="http://www.golibrary.go.kr/" title="새창열림" target="_blank" class="last"><img src="/images/gmi/main/banner06.gif" alt="경기도사이버도서관" width="120" height="33" /></a></li> 
+			   <li><a href="http://www.minwon.go.kr/main?a=AA020InfoMainApp" title="새창열림" target="_blank"><img src="/images/gmi/main/banner07.gif" alt="민원24" width="120" height="33" /></a></li> 
+			   <li><a href="http://multiculture.dibrary.net/" title="새창열림" target="_blank"><img src="/images/gmi/main/banner08.gif" alt="다문화정보" width="120" height="33" /></a></li>  
+			   <li><a href="http://www.ecomoney.co.kr/" title="새창열림" target="_blank" class="last"><img src="/images/gmi/main/banner09.gif" alt="그린카드" width="120" height="33" /></a></li> 
+			   <li><a href="http://www.nlcy.go.kr/" title="새창열림" target="_blank"><img src="/images/gmi/main/banner11.gif" alt="국립어린이청소년도서관" width="120" height="33" /></a></li> 
+			   <li><a href="http://www.suwon.go.kr/sw-www/www01/www01-05/www01-05-01.jsp" title="새창열림" target="_blank"><img src="/images/gmi/main/banner12.gif" alt="수원시 휴먼콜센터" width="120" height="33" /></a></li> 
+			   <li><a href="http://www.g-pin.go.kr/center/renew/sub_01.gpin" title="새창열림" target="_blank"><img src="/images/gmi/main/banner13.gif" alt="공공 I-PIN 재인증" width="120" height="33" /></a></li> 
+			   <li><a href="http://ebook.suwon.go.kr/home/index.php" title="새창열림" target="_blank"><img src="/images/gmi/main/banner14.gif" alt="수원시e-book" width="120" height="33" /></a></li> 
+			   <li><a href="http://storytelling.nlcy.go.kr/DmhMain/DmhMainRecommendList.do" title="새창열림" target="_blank"><img src="/images/gmi/main/banner15.gif" alt="다문화 동화구연" width="120" height="33" /></a></li> 
+
+			 </ul>
+
+<script type="text/javascript">
+
+function link_ni()
+{
+    document.form_ni.action = "http://www.nl.go.kr/ask/";
+    document.form_ni.lib_id.value = "141025";
+    document.form_ni.lib_name.value = "선경도서관";
+    document.form_ni.target="_blank";
+    document.form_ni.submit();
+}
+
+
+</script>
+<form name="form_ni" method="post" action="http://www.nl.go.kr/ask/">
+<input type="hidden" name="lib_name" />
+<input type="hidden" name="lib_id" />
+</form>
+
+
+		 </div>
+		 <!-- //배너 --> 
+
+		<ul class="foot_link">
+			 <li><a href="/html/06_info/info01.asp">도서관연혁</a></li>
+			 <li><a href="/member/policy.asp"><span>개인정보처리방침</span></a></li>
+			 <li><a href="/member/license.asp" class="last">홈페이지 이용약관</a></li>
+		</ul>
+		
+				
+		
+		<div class="foot_logo"><img src="/images/gmi/cni/foot_logo.gif" alt="사람이 반갑습니다. 휴먼시티 수원" /></div>
+
+   	    <div class="foot_add">    
+		  <address>[16258] 경기도 수원시 팔달구 신풍로23번길 68(신풍동) <br />전화 : 031-228-4728 / 1899-3300  팩스 : 031-228-3746</address>           
+		  <p>Copyright 2015 by 수원시 도서관사업소 All Right Reserved.</p>  
+		</div>
+
+
+
+
+
+
+
+	<!--//관련사이트바로가기-->
+
+		<div id="selectbox">
+			<!--//부서별홈페이지-->
+			<div id="select_depart001">
+
+				<!--//#select_box Start-->
+						  <h2><a href="#selectbox_depart001" onclick="displayOn('selectbox_depart001'); return false;">공공도서관</a></h2>
+	  <div id="selectbox_depart001" class="sbx" style="display:none;">
+		<div class="wrap">
+		  <ul>
+			<li><a href="http://sk.suwonlib.go.kr" target="_blank" title="새창열림">선경도서관</a></li>
+			<li><a href="http://ct.suwonlib.go.kr" target="_blank" title="새창열림">중앙도서관</a></li>
+			<li><a href="http://cy.suwonlib.go.kr" target="_blank" title="새창열림">창룡도서관</a></li>
+			<li><a href="http://bdn.suwonlib.go.kr" target="_blank" title="새창열림">버드내도서관</a></li>
+			<li><a href="http://seo.suwonlib.go.kr" target="_blank" title="새창열림">서수원도서관</a></li>
+			<li><a href="http://hms.suwonlib.go.kr" target="_blank" title="새창열림">호매실도서관</a></li>
+			<li><a href="http://hl.suwonlib.go.kr" target="_blank" title="새창열림">한림도서관</a></li>
+			<li><a href="http://buk.suwonlib.go.kr" target="_blank" title="새창열림">북수원도서관</a></li>
+			<li><a href="http://dcg.suwonlib.go.kr" target="_blank" title="새창열림">대추골도서관</a></li>
+			<li><a href="http://iw.suwonlib.go.kr" target="_blank" title="새창열림">일월도서관</a></li>
+			<li><a href="http://gh.suwonlib.go.kr" target="_blank" title="새창열림">광교홍재도서관</a></li>
+			<li><a href="http://yt.suwonlib.go.kr" target="_blank" title="새창열림">영통도서관</a></li>
+			<li><a href="http://tm.suwonlib.go.kr" target="_blank" title="새창열림">태장마루도서관</a></li>
+			<li><a href="http://hd.suwonlib.go.kr" target="_blank" title="새창열림">화서다산도서관</a></li>
+		  </ul>
+		</div>
+		<a href="#con_right" onclick="displayOff('selectbox_depart001'); obj=document.getElementById('select_depart001').getElementsByTagName('a')[0];obj.focus(); return false;" class="close"><img src="/images/gmi/cni/select_close.gif" alt="목록 닫기" /></a>
+		</div>
+				<!--//#select_box End-->
+
+			</div>
+			
+			<div id="select_depart002">
+
+				<!--//#select_box Start-->
+						  <h2><a href="#selectbox_depart002" onclick="displayOn('selectbox_depart002'); return false;">어린이도서관</a></h2>
+	  <div id="selectbox_depart002" class="sbx" style="display:none;">
+		<div class="wrap">
+		  <ul>
+			<li><a href="http://skid.suwonlib.go.kr" target="_blank" title="새창열림">슬기샘어린이도서관</a></li>
+			<li><a href="http://jkid.suwonlib.go.kr" target="_blank" title="새창열림">지혜샘도어린이서관</a></li>
+			<li><a href="http://bkid.suwonlib.go.kr" target="_blank" title="새창열림">바른샘어린이도서관</a></li>
+		  </ul>
+		</div>
+		<a href="#con_right" onclick="displayOff('selectbox_depart002'); obj=document.getElementById('select_depart002').getElementsByTagName('a')[0];obj.focus(); return false;" class="close"><img src="/images/gmi/cni/select_close.gif" alt="목록 닫기" /></a> 
+	  </div>
+				<!--//#select_box End-->
+
+			 </div>
+			 
+			  <div id="select_depart003">
+
+				<!--//#select_box Start-->
+							<h2><a href="#selectbox_depart003" onclick="displayOn('selectbox_depart003'); return false;">소규모도서관</a></h2>
+		<div id="selectbox_depart003" class="sbx" style="display:none;">
+		  <div class="wrap">
+			<ul>
+			  <li><a href="http://sycc.suwonlib.go.kr" target="_blank" title="새창열림">한아름도서관</a></li>
+			  <li><a href="http://bandal.suwonlib.go.kr" target="_blank" title="새창열림">반달어린이도서관</a></li>
+			  <li><a href="http://swlove.suwonlib.go.kr" target="_blank" title="새창열림">사랑샘도서관</a></li>
+			  <li><a href="http://swhope.suwonlib.go.kr" target="_blank" title="새창열림">희망샘도서관</a></li>
+			  <li><a href="http://hwahong.suwonlib.go.kr" target="_blank" title="새창열림">화홍어린이도서관</a></li>
+			  <!--li><a href="http://doyo.suwonlib.go.kr" target="_blank" title="새창열림">도요새책방</a></li-->
+			  <li><a href="http://ind.suwonlib.go.kr" target="_blank" title="새창열림">인도래작은도서관</a></li>
+			</ul>
+		  </div>
+		  <a href="#con_right" onclick="displayOff('selectbox_depart003'); obj=document.getElementById('select_depart003').getElementsByTagName('a')[0];obj.focus(); return false;" class="close"><img src="/images/gmi/cni/select_close.gif" alt="목록 닫기" /></a> 
+		  </div>
+				<!--//#select_box End-->
+
+			  </div>
+
+			  <!--//부서별홈페이지--> 
+		</div>
+
+	<!--//관련사이트바로가기-->
+
+
+
+
+
+
+ 
+		<div class="visitor">
+		  <h2 class="skip">방문자</h2>
+			  <dl class="today">
+				  <dt>오늘</dt><dd>443</dd>
+			  </dl>
+			  <dl class="total">
+				  <dt>전체</dt><dd>1,562,077</dd>
+			  </dl>
+		</div>
+
+
+
+
+
+
+
+ 	 </div>
+</div>  
+ 
+ 
+
+</div>
+</body>
+</html>

@@ -1,30 +1,29 @@
 package io.ex;
 
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URL;
 
-public class FileCopy2 {
+public class FileWriteFromInternet {
 	public static void main(String[] args) {
 		InputStream in = null;
 		OutputStream out = null;
 
 		try {
-			in = new FileInputStream("/Users/jaegyuhan/dev/javaEx/zzz/bbb.txt");
-			out = new FileOutputStream("ccc.txt");
+			URL url = new URL("http://sk.suwonlib.go.kr/");
+			in = url.openStream();
+			out = new FileOutputStream("internet.txt");
 
-			byte[] arr = new byte[5];
+			byte[] arr = new byte[10];
+
 			while (true) {
 				int count = in.read(arr);
 				if (count == -1) {
 					break;
 				}
 
-				/*
-				 * 읽어드린 만큼만 arr에서 가져와서 쓴다. 
-				 * */
 				out.write(arr, 0, count);
 			}
 
@@ -38,7 +37,6 @@ public class FileCopy2 {
 					e.printStackTrace();
 				}
 			}
-
 			if (out != null) {
 				try {
 					out.close();

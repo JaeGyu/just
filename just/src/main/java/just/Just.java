@@ -6,6 +6,9 @@ public class Just {
 		Just just = new Just();
 
 		just.print(just.input("gg"));
+
+		Object obj = just.a();
+		System.out.println(obj);
 	}
 
 	public void print(String a) {
@@ -14,5 +17,9 @@ public class Just {
 
 	public String input(String a) {
 		return a;
+	}
+
+	public String a() {
+		return "ok";
 	}
 }

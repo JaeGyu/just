@@ -8,8 +8,10 @@ public class ServerSocketTest {
 
 		ServerSocket serverSocket = new ServerSocket(8111);
 		System.out.println("클라이언트 연결 대기중!");
-		Socket socket = serverSocket.accept();
+		Socket socket = serverSocket.accept(); // listener
 		System.out.println("클라이언트 연결: " + socket);
+
+		// 클라이언트가 하나 연결이 되면 자동으로 serverSocket를 close해서 서버를 내린다.
 		socket.close();
 		serverSocket.close();
 	}

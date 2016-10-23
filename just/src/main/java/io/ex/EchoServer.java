@@ -18,23 +18,35 @@ public class EchoServer {
 		Socket socket = null;
 		InputStream in = null;
 		DataInputStream dis = null;
-		
+
 		OutputStream out = null;
 		DataOutputStream dos = null;
 
 		try {
 			serverSocket = new ServerSocket(8111);
+			System.out.println("서버가 준비 되었습니다.");
 			socket = serverSocket.accept();
 			System.out.println("클라이언트가 붙었습니다.");
 			in = socket.getInputStream();
 			dis = new DataInputStream(in);
-			String result = dis.readUTF();
-			System.out.println("문자열을 읽었습니다. : " +result);
-			
+
 			out = socket.getOutputStream();
 			dos = new DataOutputStream(out);
-			dos.writeUTF(result);
-			System.out.println("문자열을 보냈습니다. ");
+
+			while (true) {
+				String result = dis.readUTF();
+				System.out.println("문자열을 읽었습니다. : " + result);
+
+				if (result.equals("EXIT")) {
+					System.out.println("서버 종료 합니다!");
+					break;
+				}
+
+				dos.writeUTF(result);
+				dos.flush();
+
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

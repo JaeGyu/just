@@ -24,27 +24,40 @@ public class EchoClient {
 		OutputStream out = null;
 		DataOutputStream dos = null;
 
-		InputStream is = null;
-		DataInputStream dis = null;
+		InputStream in = null;
+		DataInputStream din = null;
 		try {
 			socket = new Socket("localhost", 8111);
+			System.out.println("서버에 연결 되었습니다.");
 			out = socket.getOutputStream();
 			dos = new DataOutputStream(out);
-			Scanner sc = new Scanner(System.in);
-			String str = sc.nextLine();
-			dos.writeUTF(str);
-			System.out.println("현재 보냈음!!");
 
-			is = socket.getInputStream();
-			dis = new DataInputStream(is);
-			System.out.println("받은 문자열 : " + dis.readUTF());
+			in = socket.getInputStream();
+			din = new DataInputStream(in);
+
+			Scanner sc = new Scanner(System.in);
+			while (true) {
+				System.out.println("전송할 메시지를 입력해 주세요! ");
+				String str = sc.nextLine();
+				dos.writeUTF(str);
+				dos.flush();
+
+				if (str.equals("EXIT")) {
+					System.out.println("클라이언트 종료 합니다.");
+					break;
+				}
+
+				String readMsg = din.readUTF();
+				System.out.println("받은 메시지 : " + readMsg);
+
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			try {
-				dis.close();
-				is.close();
+				din.close();
+				in.close();
 				dos.close();
 				out.close();
 				socket.close();

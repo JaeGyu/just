@@ -9,7 +9,6 @@ public class FuntionalEx {
 		Member m = new Member("alice", 35);
 
 		f.run(m);
-
 	}
 }
 

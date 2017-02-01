@@ -43,8 +43,8 @@ class User1 extends Thread {
 
 	@Override
 	public void run() {
-		System.out.println("user1 start");
 		synchronized (mem) {
+			System.out.println("user1 start");
 			this.mem.setMem(100);
 			try {
 				Thread.sleep(2000);
@@ -74,15 +74,15 @@ class User2 extends Thread {
 
 	@Override
 	public void run() {
-		System.out.println("user2 start");
 //		synchronized (mem) {
+			System.out.println("user2 start");
 			this.mem.setMem(50);
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			System.out.println(this.getName() + ":" + this.mem.getMem());
+			System.out.println(this.getName() + ":-" + this.mem.getMem());
 //		}
 	}
 }

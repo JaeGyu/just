@@ -19,11 +19,7 @@ public class StreamEx5 {
 		System.out.println(mems.stream()
 				.filter(m->m.getSex() == Member.MALE)
 				.mapToInt(Member::getAge)
-				.average()
-				.getAsDouble());
-		
-		
-		
+				.average().getAsDouble());
 	}
 }
 

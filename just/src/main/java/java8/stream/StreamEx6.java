@@ -14,6 +14,5 @@ public class StreamEx6 {
 		System.out.println();
 
 		names.stream().distinct().filter(n -> n.startsWith("홍")).forEach(n -> System.out.println(n));
-		
 	}
 }

@@ -28,6 +28,13 @@ public class StreamEx10 {
 		    	   return Integer.compare(b.getAge(), a.getAge());
 		       })
 		       .forEach(d->System.out.println(d));
+		
+		System.out.println("----------------------");
+		
+		System.out.println(persons.stream()
+		  .min((a,b)->{
+			  return Integer.compare(a.getAge(), b.getAge());
+		  }));
 	}
 }
 

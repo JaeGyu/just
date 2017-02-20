@@ -11,8 +11,8 @@ public class Main {
 		ping.tell("start", ActorRef.noSender());
 
 		ActorSystem as = ActorSystem.create("TEST-KEJ");
-		ActorRef ping2 = as.actorOf(Props.create(PingActor.class), "pingActor");
-		as.actorOf(Props.create(PongActor.class, ping2)).tell("start-KEJ", ActorRef.noSender());
+		ActorRef ping2 = as.actorOf(Props.create(PingActor.class), "pingActor2");
+		as.actorOf(Props.create(PongActor.class, ping2),"pongActor").tell("start-KEJ", ActorRef.noSender());
 
 	}
 }

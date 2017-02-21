@@ -20,7 +20,7 @@ public class PongActor extends UntypedActor {
 			String msg = (String) message;
 			log.info("Pong received {} ", msg);
 			ping.tell("pong", getSelf());
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		}
 	}
 

@@ -16,9 +16,11 @@ public class ReflectTest2 {
 //		System.out.println(newInstance);
 
 		
-		Constructor con = clz.getDeclaredConstructor(String.class);
+//		Constructor con = clz.getDeclaredConstructor(String.class);
+//		
+//		Object obj = con.newInstance("");
 		
-		Object obj = con.newInstance("");
+		Object obj = clz.newInstance();
 		
 		System.out.println(obj);
 		

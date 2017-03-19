@@ -10,7 +10,7 @@ public class BuilderTest {
 		Rects r = new Rects.Builder(10, 10).margin(5).build();
 		
 		System.out.println(r);
-
+		
 	}
 }
 

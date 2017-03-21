@@ -14,10 +14,11 @@ package algorithm.prob;
  * ...
  * */
 public class Prob4 {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		System.out.println("1");
 		String tmp = "1";
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 30; i++) {
+			Thread.sleep(3000);
 			tmp = nextAntNum(tmp);
 			System.out.println(tmp);
 		}

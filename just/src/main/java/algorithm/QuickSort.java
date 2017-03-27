@@ -2,11 +2,6 @@ package algorithm;
 
 import java.util.Arrays;
 
-/*
- * void quick([],lo,hi)
- * index patition([],lo,hi)
- * swap([], sourceIdx, targetIdx)
- * */
 public class QuickSort {
 	public static void main(String[] args) {
 		Integer[] nums = { 2, 3, 1, 5, 6, 4 };

@@ -5,13 +5,13 @@
 	<artifactId>just</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-<!-- 	<repositories> -->
-<!-- 		<repository> -->
-<!-- 			<id>my.mvn.repo</id> -->
-<!-- 			<url>https://github.com/keesun/mvn-repo/raw/master</url> -->
-<!-- 		</repository> -->
-<!-- 	</repositories> -->
-	
+	<!-- <repositories> -->
+	<!-- <repository> -->
+	<!-- <id>my.mvn.repo</id> -->
+	<!-- <url>https://github.com/keesun/mvn-repo/raw/master</url> -->
+	<!-- </repository> -->
+	<!-- </repositories> -->
+
 	<properties>
 		<vertx.version>2.0.2-final</vertx.version>
 		<mod-socket-io.version>1.0.2</mod-socket-io.version>
@@ -28,13 +28,25 @@
 			<artifactId>hazelcast</artifactId>
 			<version>3.6.4</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.16.6</version>
 		</dependency>
-		
+
+		<!-- reactive Streams -->
+		<dependency>
+			<groupId>org.reactivestreams</groupId>
+			<artifactId>reactive-streams</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.reactivestreams</groupId>
+			<artifactId>reactive-streams-tck</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
 		<!-- vert.x -->
 		<dependency>
 			<groupId>io.vertx</groupId>
@@ -46,10 +58,10 @@
 			<artifactId>vertx-platform</artifactId>
 			<version>${vertx.version}</version>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.nhncorp</groupId> -->
-<!-- 			<artifactId>mod-socket-io</artifactId> -->
-<!-- 			<version>${mod-socket-io.version}</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.nhncorp</groupId> -->
+		<!-- <artifactId>mod-socket-io</artifactId> -->
+		<!-- <version>${mod-socket-io.version}</version> -->
+		<!-- </dependency> -->
 	</dependencies>
 </project>
